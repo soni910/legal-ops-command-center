@@ -1,0 +1,5 @@
+dataset,field,description
+synthetic_contract_requests,request_id,Unique synthetic legal request identifier
+synthetic_contract_requests,request_stage,Current workflow stage
+synthetic_salesforce_opportunities,opportunity_id,Unique synthetic Salesforce opportunity ID
+synthetic_salesforce_opportunities,salesforce_stage,Opportunity stage in Salesforce alignment simulation
