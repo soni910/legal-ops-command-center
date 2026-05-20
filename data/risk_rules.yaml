@@ -1,0 +1,10 @@
+data_as_of_date: '2026-05-19'
+rules:
+  - name: missing_counterparty
+    points: 20
+  - name: invalid_contract_type
+    points: 25
+  - name: uncapped_indemnity
+    points: 35
+  - name: executed_not_filed
+    points: 30
