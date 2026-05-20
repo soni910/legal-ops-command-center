@@ -1,58 +1,47 @@
 import streamlit as st
+import plotly.express as px
 
 from utils.data_loader import load_joined_contract_data
 from utils.metrics import (
-    average_days_in_stage_by_stage,
+    average_cycle_time_by_contract_type,
+    average_cycle_time_by_legal_reviewer,
     bottleneck_stage_counts,
-    contract_volume_by_department,
     escalations_by_legal_reviewer,
-    metadata_completeness_score,
-    metadata_issue_frequency,
-    open_requests_by_department,
+    open_requests_by_contract_type,
     open_requests_by_legal_reviewer,
-    open_requests_by_stage,
-    salesforce_mismatch_frequency,
     sla_breach_rate_by_department,
+    sla_breach_rate_by_legal_reviewer,
 )
 
 st.title("Workload Analytics")
-st.write("Analyze synthetic workload volume, throughput, and trends to support staffing decisions.")
+st.write("Workload and throughput analytics for synthetic legal-ops operations.")
 
 df = load_joined_contract_data()
 if df.empty:
-    st.info("No contract data available.")
-else:
-    st.subheader("Open Requests by Stage")
-    st.bar_chart(open_requests_by_stage(df))
+    st.info("No data available.")
+    st.stop()
 
-    st.subheader("Open Requests by Department")
-    st.bar_chart(open_requests_by_department(df))
+def bar_from_series(series, x, y):
+    if series.empty:
+        st.info("No data for this view.")
+    else:
+        s = series.reset_index()
+        s.columns = [x, y]
+        st.plotly_chart(px.bar(s, x=x, y=y), use_container_width=True)
 
-    st.subheader("Open Requests by Legal Reviewer")
-    st.bar_chart(open_requests_by_legal_reviewer(df))
-
-    st.subheader("Contract Volume by Department")
-    st.bar_chart(contract_volume_by_department(df))
-
-    st.subheader("SLA Breach Rate by Department")
-    st.bar_chart(sla_breach_rate_by_department(df))
-
-    st.subheader("Escalations by Legal Reviewer")
-    st.bar_chart(escalations_by_legal_reviewer(df))
-
-    st.subheader("Bottleneck Stage Counts")
-    st.bar_chart(bottleneck_stage_counts(df))
-
-    st.subheader("Average Days in Stage")
-    st.bar_chart(average_days_in_stage_by_stage(df))
-
-    st.subheader("Metadata QA")
-    st.metric("Metadata Completeness Score", f"{metadata_completeness_score(df):.1f}%")
-    mif = metadata_issue_frequency(df)
-    if not mif.empty:
-        st.bar_chart(mif.set_index("issue")["count"])
-
-    st.subheader("Salesforce Mismatch Frequency")
-    smf = salesforce_mismatch_frequency(df)
-    if not smf.empty:
-        st.bar_chart(smf.set_index("reason")["count"])
+st.subheader("Open Tickets by Contract Type")
+bar_from_series(open_requests_by_contract_type(df), "contract_type", "count")
+st.subheader("Open Tickets by Legal Reviewer")
+bar_from_series(open_requests_by_legal_reviewer(df), "assigned_legal_reviewer", "count")
+st.subheader("Average Cycle Time by Contract Type")
+bar_from_series(average_cycle_time_by_contract_type(df), "contract_type", "avg_cycle_days")
+st.subheader("Average Cycle Time by Legal Reviewer")
+bar_from_series(average_cycle_time_by_legal_reviewer(df), "assigned_legal_reviewer", "avg_cycle_days")
+st.subheader("SLA Breach Rate by Department")
+bar_from_series(sla_breach_rate_by_department(df), "department", "breach_rate_pct")
+st.subheader("SLA Breach Rate by Legal Reviewer")
+bar_from_series(sla_breach_rate_by_legal_reviewer(df), "assigned_legal_reviewer", "breach_rate_pct")
+st.subheader("Escalation Volume by Reviewer")
+bar_from_series(escalations_by_legal_reviewer(df), "assigned_legal_reviewer", "escalations")
+st.subheader("Bottleneck Stages")
+bar_from_series(bottleneck_stage_counts(df), "request_stage", "count")
