@@ -1,19 +1,15 @@
 import streamlit as st
 
-from utils.data_loader import load_joined_contract_data
-from utils.metadata_qa import add_metadata_qa_columns
-from utils.risk_engine import add_risk_columns
-from utils.salesforce_alignment import add_salesforce_alignment_columns
+from utils.dashboard_data import get_joined_enriched_data
 
 st.title("Request Queue")
 st.markdown("Operational triage console for filtering, prioritizing, and reviewing synthetic request records.")
 
-df = load_joined_contract_data()
+df = get_joined_enriched_data()
 if df.empty:
     st.info("No queue data available.")
     st.stop()
 
-df = add_salesforce_alignment_columns(add_metadata_qa_columns(add_risk_columns(df)))
 
 with st.expander("Filters", expanded=True):
     r1 = st.columns(3)

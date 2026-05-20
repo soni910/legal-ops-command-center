@@ -1,7 +1,7 @@
 import plotly.express as px
 import streamlit as st
 
-from utils.data_loader import load_joined_contract_data
+from utils.dashboard_data import get_joined_enriched_data
 from utils.metrics import (
     average_cycle_time_by_contract_type,
     average_cycle_time_by_legal_reviewer,
@@ -16,7 +16,7 @@ from utils.metrics import (
 st.title("Workload Analytics")
 st.markdown("Operational workload, throughput, and bottleneck analysis for synthetic legal-ops data.")
 
-df = load_joined_contract_data()
+df = get_joined_enriched_data()
 if df.empty:
     st.info("No data available.")
     st.stop()

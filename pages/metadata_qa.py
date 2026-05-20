@@ -1,18 +1,18 @@
 import plotly.express as px
 import streamlit as st
 
-from utils.data_loader import load_contract_requests
-from utils.metadata_qa import add_metadata_qa_columns, metadata_completeness_score, metadata_issue_frequency
+from utils.dashboard_data import get_contracts_with_metadata_qa
+from utils.metadata_qa import metadata_completeness_score, metadata_issue_frequency
 
 st.title("Metadata QA")
 st.markdown("Data quality controls for source request metadata used in the Salesforce alignment simulation.")
 
-df = load_contract_requests()
+df = get_contracts_with_metadata_qa()
 if df.empty:
     st.info("No contract data available.")
     st.stop()
 
-qa = add_metadata_qa_columns(df)
+qa = df
 
 st.metric("Metadata Completeness Score", f"{metadata_completeness_score(df):.1f}%")
 

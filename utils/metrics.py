@@ -4,10 +4,9 @@ from __future__ import annotations
 
 import pandas as pd
 
-from utils.metadata_qa import add_metadata_qa_columns as _add_metadata_qa_columns
 from utils.metadata_qa import metadata_completeness_score, metadata_issue_frequency
 from utils.risk_engine import add_risk_columns
-from utils.salesforce_alignment import add_salesforce_alignment_columns, salesforce_mismatch_frequency
+from utils.salesforce_alignment import salesforce_mismatch_frequency
 
 CLOSED_STAGE = "Filed/Executed"
 

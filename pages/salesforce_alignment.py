@@ -1,19 +1,18 @@
 import plotly.express as px
 import streamlit as st
 
-from utils.data_loader import load_joined_contract_data
-from utils.risk_engine import add_risk_columns
-from utils.salesforce_alignment import add_salesforce_alignment_columns, salesforce_mismatch_frequency
+from utils.dashboard_data import get_joined_enriched_data
+from utils.salesforce_alignment import salesforce_mismatch_frequency
 
 st.title("Salesforce Alignment")
 st.markdown("Consistency checks between synthetic contract workflow records and Salesforce opportunity data.")
 
-df = load_joined_contract_data()
+df = get_joined_enriched_data()
 if df.empty:
     st.info("No data available.")
     st.stop()
 
-aligned = add_salesforce_alignment_columns(add_risk_columns(df))
+aligned = df
 
 linked = aligned[aligned["opportunity_id"].notna()]
 missing = aligned[(aligned["salesforce_opportunity_id"].isna()) | (aligned["salesforce_opportunity_id"].astype(str).str.strip() == "")]

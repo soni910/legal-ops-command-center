@@ -1,7 +1,7 @@
 import plotly.express as px
 import streamlit as st
 
-from utils.data_loader import load_joined_contract_data
+from utils.dashboard_data import get_joined_enriched_data
 from utils.metrics import (
     average_cycle_time,
     bottleneck_stage_counts,
@@ -10,35 +10,34 @@ from utils.metrics import (
     open_requests,
     sla_breach_rate,
 )
-from utils.risk_engine import add_risk_columns, escalation_reason_frequency
-from utils.salesforce_alignment import add_salesforce_alignment_columns
+from utils.risk_engine import escalation_reason_frequency
 
 st.title("Command Center")
 st.markdown("""High-level executive view of synthetic legal-ops queue health in a **Salesforce alignment simulation**.""")
 
-base_df = load_joined_contract_data()
-if base_df.empty:
+df = get_joined_enriched_data()
+if df.empty:
     st.info("No data available. Run synthetic data generation first.")
     st.stop()
 
-risk_df = add_risk_columns(base_df)
-aligned_df = add_salesforce_alignment_columns(risk_df)
+risk_df = df
+aligned_df = df
 
 st.markdown("---")
 a, b, c = st.columns(3)
-a.metric("Open Requests", open_requests(base_df))
-b.metric("Escalations", number_of_escalations(base_df))
-c.metric("SLA Breach Rate", f"{sla_breach_rate(base_df):.1f}%")
+a.metric("Open Requests", open_requests(df))
+b.metric("Escalations", number_of_escalations(df))
+c.metric("SLA Breach Rate", f"{sla_breach_rate(df):.1f}%")
 
 d, e, f = st.columns(3)
-d.metric("Metadata Completeness", f"{metadata_completeness_score(base_df):.1f}%")
+d.metric("Metadata Completeness", f"{metadata_completeness_score(df):.1f}%")
 e.metric("Salesforce Mismatch Count", int(aligned_df["salesforce_mismatch"].sum()))
-f.metric("Avg Cycle Time", f"{average_cycle_time(base_df):.1f} days")
+f.metric("Avg Cycle Time", f"{average_cycle_time(df):.1f} days")
 
 left, right = st.columns([1, 1])
 with left:
     st.subheader("Top Stuck Stages")
-    stuck = bottleneck_stage_counts(base_df).head(7)
+    stuck = bottleneck_stage_counts(df).head(7)
     if not stuck.empty:
         ds = stuck.reset_index()
         ds.columns = ["Stage", "Count"]

@@ -1,18 +1,18 @@
 import plotly.express as px
 import streamlit as st
 
-from utils.data_loader import load_joined_contract_data
-from utils.risk_engine import add_risk_columns, escalation_reason_frequency
+from utils.dashboard_data import get_joined_enriched_data
+from utils.risk_engine import escalation_reason_frequency
 
 st.title("Escalations")
 st.markdown("Escalation monitoring for synthetic legal-ops risk signals and resolution prioritization.")
 
-df = load_joined_contract_data()
+df = get_joined_enriched_data()
 if df.empty:
     st.info("No data available.")
     st.stop()
 
-risk_df = add_risk_columns(df)
+risk_df = df
 esc = risk_df[risk_df["escalation_required"]]
 
 c1, c2 = st.columns(2)
