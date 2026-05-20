@@ -1,0 +1,106 @@
+opportunity_id,account_name,opportunity_name,salesforce_stage,opportunity_amount,opportunity_owner,expected_close_date,closed_date,department
+OPP-10001,Hooli,Procurement Expansion 1,Proposal/Price Quote,300000,Morgan Patel,2026-01-19,,Procurement
+OPP-10002,Umbrella Systems,HR Expansion 2,Negotiation/Review,50000,Casey Lopez,2026-01-27,,HR
+OPP-10003,Wayne Enterprises,HR Expansion 3,Proposal/Price Quote,500000,Casey Lopez,2026-03-31,,HR
+OPP-10004,Acme Corp,Operations Expansion 4,Closed Won,50000,Taylor Singh,2026-03-12,2026-02-22,Operations
+OPP-10005,Vehement Capital,Sales Expansion 5,Closed Won,900000,Morgan Patel,2026-03-24,2026-03-24,Sales
+OPP-10006,Globex LLC,Operations Expansion 6,Prospecting,300000,Riley Chen,2026-02-04,,Operations
+OPP-10007,Hooli,IT Expansion 7,Prospecting,900000,Morgan Patel,2026-01-23,,IT
+OPP-10008,Vehement Capital,Finance Expansion 8,Closed Won,50000,Taylor Singh,2026-02-19,2026-02-11,Finance
+OPP-10009,Acme Corp,Finance Expansion 9,Prospecting,500000,Jordan Lee,2026-05-12,,Finance
+OPP-10010,Initech,Procurement Expansion 10,Proposal/Price Quote,120000,Alex Kim,2026-03-08,,Procurement
+OPP-10011,Vehement Capital,Sales Expansion 11,Closed Won,500000,Riley Chen,2026-02-18,2026-02-04,Sales
+OPP-10012,Soylent Labs,HR Expansion 12,Closed Won,75000,Jordan Lee,2026-03-22,2026-03-17,HR
+OPP-10013,Acme Corp,HR Expansion 13,Qualification,500000,Morgan Patel,2026-04-13,,HR
+OPP-10014,Hooli,Procurement Expansion 14,Prospecting,300000,Alex Kim,2026-03-14,,Procurement
+OPP-10015,Hooli,Finance Expansion 15,Negotiation/Review,300000,Riley Chen,2026-04-18,,Finance
+OPP-10016,Wonka Distribution,Operations Expansion 16,Closed Won,500000,Morgan Patel,2026-02-06,2026-01-27,Operations
+OPP-10017,Hooli,Sales Expansion 17,Prospecting,25000,Morgan Patel,2026-04-05,,Sales
+OPP-10018,Hooli,HR Expansion 18,Prospecting,500000,Alex Kim,2026-05-01,,HR
+OPP-10019,Wonka Distribution,IT Expansion 19,Closed Won,50000,Casey Lopez,2026-03-27,2026-03-21,IT
+OPP-10020,Stark Retail,Sales Expansion 20,Proposal/Price Quote,120000,Jordan Lee,2026-02-24,,Sales
+OPP-10021,Vehement Capital,Sales Expansion 21,Closed Lost,25000,Jordan Lee,2026-04-12,2026-04-11,Sales
+OPP-10022,Soylent Labs,Finance Expansion 22,Qualification,500000,Alex Kim,2026-03-15,,Finance
+OPP-10023,Soylent Labs,Procurement Expansion 23,Proposal/Price Quote,75000,Casey Lopez,2026-04-18,,Procurement
+OPP-10024,Soylent Labs,Finance Expansion 24,Closed Lost,500000,Riley Chen,2026-02-23,2026-02-10,Finance
+OPP-10025,Wayne Enterprises,IT Expansion 25,Closed Won,300000,Morgan Patel,2026-02-14,2026-01-30,IT
+OPP-10026,Hooli,Procurement Expansion 26,Closed Won,25000,Taylor Singh,2026-02-14,2026-02-14,Procurement
+OPP-10027,Wayne Enterprises,IT Expansion 27,Prospecting,500000,Riley Chen,2026-05-07,,IT
+OPP-10028,Soylent Labs,HR Expansion 28,Proposal/Price Quote,300000,Riley Chen,2026-02-05,,HR
+OPP-10029,Wonka Distribution,Finance Expansion 29,Proposal/Price Quote,75000,Taylor Singh,2026-03-18,,Finance
+OPP-10030,Stark Retail,Procurement Expansion 30,Qualification,900000,Alex Kim,2026-04-02,,Procurement
+OPP-10031,Stark Retail,Operations Expansion 31,Qualification,300000,Casey Lopez,2026-03-24,,Operations
+OPP-10032,Globex LLC,Procurement Expansion 32,Prospecting,25000,Taylor Singh,2026-05-08,,Procurement
+OPP-10033,Soylent Labs,Finance Expansion 33,Prospecting,25000,Morgan Patel,2026-05-18,,Finance
+OPP-10034,Globex LLC,Sales Expansion 34,Qualification,75000,Casey Lopez,2026-04-11,,Sales
+OPP-10035,Wonka Distribution,Sales Expansion 35,Negotiation/Review,300000,Taylor Singh,2026-02-24,,Sales
+OPP-10036,Soylent Labs,IT Expansion 36,Closed Won,75000,Alex Kim,2026-02-03,2026-02-03,IT
+OPP-10037,Wonka Distribution,IT Expansion 37,Qualification,500000,Jordan Lee,2026-03-04,,IT
+OPP-10038,Initech,Sales Expansion 38,Prospecting,25000,Alex Kim,2026-04-21,,Sales
+OPP-10039,Initech,Operations Expansion 39,Closed Won,300000,Jordan Lee,2026-04-01,2026-03-27,Operations
+OPP-10040,Hooli,IT Expansion 40,Proposal/Price Quote,120000,Casey Lopez,2026-04-05,,IT
+OPP-10041,Vehement Capital,Sales Expansion 41,Closed Lost,300000,Riley Chen,2026-03-08,2026-02-25,Sales
+OPP-10042,Globex LLC,HR Expansion 42,Negotiation/Review,500000,Jordan Lee,2026-05-18,,HR
+OPP-10043,Vehement Capital,Operations Expansion 43,Qualification,120000,Morgan Patel,2026-01-31,,Operations
+OPP-10044,Wonka Distribution,Sales Expansion 44,Prospecting,25000,Alex Kim,2026-01-28,,Sales
+OPP-10045,Globex LLC,Finance Expansion 45,Proposal/Price Quote,75000,Taylor Singh,2026-04-09,,Finance
+OPP-10046,Hooli,IT Expansion 46,Prospecting,300000,Taylor Singh,2026-03-27,,IT
+OPP-10047,Acme Corp,HR Expansion 47,Proposal/Price Quote,300000,Riley Chen,2026-03-02,,HR
+OPP-10048,Acme Corp,Procurement Expansion 48,Closed Lost,75000,Riley Chen,2026-02-02,2026-01-22,Procurement
+OPP-10049,Wonka Distribution,Procurement Expansion 49,Qualification,75000,Alex Kim,2026-05-05,,Procurement
+OPP-10050,Acme Corp,IT Expansion 50,Prospecting,120000,Jordan Lee,2026-03-17,,IT
+OPP-10051,Stark Retail,Operations Expansion 51,Qualification,500000,Jordan Lee,2026-03-11,,Operations
+OPP-10052,Umbrella Systems,Finance Expansion 52,Closed Won,50000,Jordan Lee,2026-05-05,2026-04-20,Finance
+OPP-10053,Stark Retail,HR Expansion 53,Proposal/Price Quote,25000,Taylor Singh,2026-01-29,,HR
+OPP-10054,Initech,IT Expansion 54,Qualification,75000,Casey Lopez,2026-02-22,,IT
+OPP-10055,Acme Corp,Operations Expansion 55,Prospecting,75000,Jordan Lee,2026-02-12,,Operations
+OPP-10056,Hooli,Sales Expansion 56,Proposal/Price Quote,25000,Jordan Lee,2026-03-20,,Sales
+OPP-10057,Umbrella Systems,Procurement Expansion 57,Qualification,120000,Jordan Lee,2026-02-16,,Procurement
+OPP-10058,Umbrella Systems,IT Expansion 58,Closed Won,300000,Riley Chen,2026-04-17,2026-04-04,IT
+OPP-10059,Wayne Enterprises,Procurement Expansion 59,Closed Won,900000,Alex Kim,2026-02-08,2026-01-19,Procurement
+OPP-10060,Umbrella Systems,Operations Expansion 60,Closed Won,25000,Jordan Lee,2026-02-25,2026-02-09,Operations
+OPP-10061,Soylent Labs,Operations Expansion 61,Prospecting,25000,Riley Chen,2026-03-08,,Operations
+OPP-10062,Soylent Labs,IT Expansion 62,Closed Lost,75000,Taylor Singh,2026-03-24,2026-03-09,IT
+OPP-10063,Wayne Enterprises,Procurement Expansion 63,Closed Lost,50000,Alex Kim,2026-01-26,2026-01-14,Procurement
+OPP-10064,Initech,Sales Expansion 64,Closed Won,50000,Taylor Singh,2026-02-18,2026-01-31,Sales
+OPP-10065,Umbrella Systems,HR Expansion 65,Closed Lost,120000,Casey Lopez,2026-02-14,2026-02-08,HR
+OPP-10066,Soylent Labs,Operations Expansion 66,Prospecting,500000,Morgan Patel,2026-01-26,,Operations
+OPP-10067,Globex LLC,HR Expansion 67,Closed Won,25000,Riley Chen,2026-05-15,2026-05-03,HR
+OPP-10068,Soylent Labs,IT Expansion 68,Closed Lost,500000,Morgan Patel,2026-03-22,2026-03-06,IT
+OPP-10069,Umbrella Systems,Procurement Expansion 69,Closed Lost,75000,Morgan Patel,2026-02-15,2026-01-28,Procurement
+OPP-10070,Soylent Labs,Operations Expansion 70,Negotiation/Review,300000,Alex Kim,2026-04-06,,Operations
+OPP-10071,Hooli,Finance Expansion 71,Closed Lost,120000,Riley Chen,2026-02-25,2026-02-22,Finance
+OPP-10072,Initech,HR Expansion 72,Negotiation/Review,75000,Morgan Patel,2026-03-06,,HR
+OPP-10073,Wonka Distribution,IT Expansion 73,Closed Lost,300000,Taylor Singh,2026-04-05,2026-04-02,IT
+OPP-10074,Wayne Enterprises,Sales Expansion 74,Closed Lost,900000,Morgan Patel,2026-03-14,2026-03-13,Sales
+OPP-10075,Hooli,Finance Expansion 75,Qualification,75000,Alex Kim,2026-02-04,,Finance
+OPP-10076,Umbrella Systems,HR Expansion 76,Prospecting,120000,Jordan Lee,2026-02-08,,HR
+OPP-10077,Acme Corp,HR Expansion 77,Prospecting,500000,Alex Kim,2026-02-25,,HR
+OPP-10078,Initech,Operations Expansion 78,Qualification,900000,Riley Chen,2026-03-29,,Operations
+OPP-10079,Wonka Distribution,Sales Expansion 79,Closed Lost,25000,Riley Chen,2026-02-07,2026-01-30,Sales
+OPP-10080,Initech,Sales Expansion 80,Prospecting,500000,Jordan Lee,2026-04-24,,Sales
+OPP-10081,Globex LLC,IT Expansion 81,Closed Won,120000,Morgan Patel,2026-05-19,2026-05-13,IT
+OPP-10082,Initech,IT Expansion 82,Closed Lost,50000,Casey Lopez,2026-02-12,2026-01-27,IT
+OPP-10083,Soylent Labs,Sales Expansion 83,Qualification,500000,Morgan Patel,2026-04-15,,Sales
+OPP-10084,Wayne Enterprises,Procurement Expansion 84,Closed Lost,75000,Taylor Singh,2026-02-14,2026-02-04,Procurement
+OPP-10085,Initech,IT Expansion 85,Closed Lost,25000,Riley Chen,2026-02-26,2026-02-10,IT
+OPP-10086,Acme Corp,IT Expansion 86,Closed Won,25000,Alex Kim,2026-04-12,2026-04-01,IT
+OPP-10087,Umbrella Systems,Sales Expansion 87,Proposal/Price Quote,900000,Taylor Singh,2026-02-07,,Sales
+OPP-10088,Globex LLC,Finance Expansion 88,Negotiation/Review,75000,Jordan Lee,2026-01-31,,Finance
+OPP-10089,Wonka Distribution,Finance Expansion 89,Closed Won,25000,Riley Chen,2026-01-23,2026-01-17,Finance
+OPP-10090,Globex LLC,IT Expansion 90,Closed Won,500000,Jordan Lee,2026-02-25,2026-02-08,IT
+OPP-10091,Vehement Capital,Operations Expansion 91,Qualification,500000,Taylor Singh,2026-04-09,,Operations
+OPP-10092,Vehement Capital,Sales Expansion 92,Qualification,300000,Alex Kim,2026-04-29,,Sales
+OPP-10093,Initech,IT Expansion 93,Qualification,50000,Riley Chen,2026-05-08,,IT
+OPP-10094,Initech,Finance Expansion 94,Closed Won,120000,Morgan Patel,2026-02-16,2026-01-31,Finance
+OPP-10095,Initech,IT Expansion 95,Negotiation/Review,300000,Morgan Patel,2026-05-11,,IT
+OPP-10096,Acme Corp,Sales Expansion 96,Closed Lost,120000,Taylor Singh,2026-03-18,2026-03-06,Sales
+OPP-10097,Umbrella Systems,IT Expansion 97,Proposal/Price Quote,500000,Riley Chen,2026-03-01,,IT
+OPP-10098,Hooli,IT Expansion 98,Qualification,50000,Taylor Singh,2026-01-26,,IT
+OPP-10099,Wayne Enterprises,HR Expansion 99,Closed Lost,300000,Jordan Lee,2026-02-27,2026-02-16,HR
+OPP-10100,Umbrella Systems,Procurement Expansion 100,Closed Lost,120000,Morgan Patel,2026-03-17,2026-03-07,Procurement
+OPP-10101,Hooli,IT Expansion 101,Qualification,500000,Casey Lopez,2026-03-03,,IT
+OPP-10102,Soylent Labs,IT Expansion 102,Closed Lost,900000,Jordan Lee,2026-05-04,2026-04-25,IT
+OPP-10103,Globex LLC,Finance Expansion 103,Qualification,500000,Taylor Singh,2026-03-24,,Finance
+OPP-10104,Acme Corp,IT Expansion 104,Negotiation/Review,25000,Jordan Lee,2026-04-19,,IT
+OPP-10105,Wonka Distribution,Operations Expansion 105,Closed Won,25000,Casey Lopez,2026-01-20,2026-01-16,Operations
